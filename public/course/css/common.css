@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Your Name (e8net.cn)
+ * @date    2017-10-30 20:44:41
+ */
+/*初始化*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Microsoft YaHei", "SimHei", "SimSun";
+    background-color: #e5e4e4;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*头部*/
+.header {
+    width: 1000px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.header .header_box {
+    width: 100%;
+    height: 165px;
+    background-image: url(../images/header1.png);
+    border-bottom: 1px solid #89c0ef;
+}
+
+/*导航*/
+.header .nav {
+    width: 1000px;
+    height: 35px;
+    text-align: center;
+    background-color: #e5e4e4;
+}
+
+.header .nav ul {
+    display: block;
+    height: 100%;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header .nav ul li {
+    float: left;
+    list-style: none;
+    line-height: 35px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.header .nav ul li a {
+    display: block;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+.header .nav ul li:hover {
+    background-color: #094e85;
+}
+
+.header .nav ul li:hover a {
+    color: #fff;
+}
+
+.header .nav ul .active {
+    background-color: #094e85;
+}
+
+.header .nav ul .active a {
+    color: #fff;
+}
+
+/*子菜单*/
+.header .nav .sub-nav {
+    top: 35px;
+    background-color: #094e85;
+    z-index: 99;
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    display: none;
+}
+
+.header .nav .sub-nav ul li {
+    clear: both;
+}
+
+.header .nav .sub-nav a {
+    color: #fff !important;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    border: none !important;
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+}
+
+.header .nav .sub-nav a:hover {
+    background: #337ab7;
+}
+
+.header .nav ul li:hover .sub-nav {
+    display: block;
+}
+
+/*底部*/
+.footer {
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #D7D7D7;
+    background: url(../images/foot.gif) repeat-x;
+}
+
+.footer-box {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 0px;
+}
+
+.footer-box p {
+    color: #424242;
+    margin-bottom: 10px;
+}
+
+.footer-box a {
+    color: #424242;
+}
+
+.footer-box ul {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.footer-box ul li {
+    color: #424242;
+    text-decoration: none;
+    margin-bottom: 10px;
+    float: left;
+    margin-right: 15px;
+}
+
+/*banner图*/
+.banner {
+    width: 1000px;
+    height: 130px;
+    margin: 0 auto;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}

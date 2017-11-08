@@ -1,0 +1,187 @@
+/*侧边导航*/
+.list-contain {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.list-contain .list-nav {
+    width: 25%;
+    float: left;
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+.list-title {
+    height: 35px;
+    width: 100%;
+    line-height: 35px;
+    border-bottom: 2px solid #094e85;
+    position: relative;
+}
+
+.list-title h4 {
+    font-weight: normal;
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    padding-left: 5px;
+}
+
+.list-nav ul {
+    padding: 0px;
+    list-style: none;
+    margin: 10px 0 10px 0;
+}
+
+.list-nav ul li {
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.list-nav ul li a {
+    display: block;
+    text-indent: 35px;
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+}
+
+.list-nav ul li .active {
+    background-color: #094e85;
+    color: #fff;
+}
+
+.list-nav ul li:hover a {
+    background-color: #094e85;
+    color: #fff;
+}
+
+.list-nav ul li span {
+    float: right;
+    position: relative;
+    right: 20px;
+}
+
+.list-box {
+    width: 75%;
+    float: left;
+    padding: 0px 0px 0px 20px;
+}
+
+.list-box-contain {
+    border: 1px solid #ddd;
+    padding: 0 0 0 10px;
+}
+
+.list-box h4 {
+    float: left;
+}
+
+.list-box .list-title .list-box-ul {
+    float: right;
+}
+
+.list-box .list-title .list-box-ul li {
+    float: left;
+    font-size: 14px;
+}
+
+.list-box .list-title .list-box-ul li a {
+    padding: 0 5px;
+    color: #666;
+}
+
+.list-box .list-title .list-box-ul li span {
+    padding: 0 5px;
+}
+
+.list-box .list-news {
+    padding: 10px;
+}
+
+.list-box .list-news p {
+    line-height: 2em;
+    text-indent: 2em;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.list-box .list-news ul .item {
+    line-height: 40px;
+    position: relative;
+    border-bottom: 1px dashed #f1be99;
+}
+
+.list-box .list-news ul .item:hover a {
+    color: #094e85;
+}
+
+.list-box .list-news ul .item .text_title {
+    font-size: 14px;
+    line-height: 40px;
+    padding-right: 40%;
+    color: #545454;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    display: block;
+}
+
+.list-box .list-news ul .item .time {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    color: #9e9e9e;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.list-box .page {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.list-box .page .pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.list-box .page .pagination > li {
+    display: inline;
+}
+
+.list-box .page .pagination li a {
+    position: relative;
+    float: left;
+    padding: 5px 10px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.list-box .page .pagination li a:hover {
+    background-color: #094e85;
+    color: #fff;
+}
+
+.list-box .page .pagination li .active {
+    background-color: #094e85;
+    color: #fff;
+}

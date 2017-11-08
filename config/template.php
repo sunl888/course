@@ -8,7 +8,7 @@ return [
 
     'theme_namespace' => 'theme',
 
-    'current_theme_path' => resource_path('views/frontend'),
+    'current_theme_path' => resource_path('views/course'),
 
     'templates' => [
 
@@ -18,17 +18,12 @@ return [
                 'title' => '默认单页模板',
                 'default' => true
             ]
-        ]
-        ,
+        ],
         'list' => [
             [
                 'file_name' => 'default',
                 'title' => '默认列表模板',
                 'default' => true
-            ],
-            [
-                'file_name' => 'team',
-                'title' => '团队列表模板'
             ]
         ],
         'content' => [
