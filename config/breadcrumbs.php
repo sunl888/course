@@ -18,8 +18,9 @@ return [
     |
     */
 
-    'view' => 'breadcrumbs::bootstrap4',
-
+    //'view' => 'breadcrumbs::bootstrap4',
+    // customise the HTML style
+    'view' => 'course.layouts.partials.breadcrumbs',
     /*
     |--------------------------------------------------------------------------
     | Breadcrumbs File(s)
