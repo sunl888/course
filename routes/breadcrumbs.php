@@ -18,5 +18,6 @@ Breadcrumbs::register('category', function ($breadcrumbs, $category) {
 
 Breadcrumbs::register('post', function ($breadcrumbs, $post) {
     $breadcrumbs->parent('category', $post->category);
-    $breadcrumbs->push($post->title , route('frontend.web.post.show', $post->slug));
+    // 这里前端要求显示'正文'而不是显示文章标题，所以这里暂时改成'正文'
+    $breadcrumbs->push('正文' , route('frontend.web.post.show', $post->slug));
 });
