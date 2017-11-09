@@ -20,20 +20,10 @@
                     {{ Breadcrumbs::render('category', $category) }}
                 </div>
                 <div class="list-news">
-                    <ul>
-                        @forelse($posts as $post)
-                            <li class="item">
-                                <a class="text_title" href="{!! $post->getPresenter()->url() !!}">{{$post->title}}</a>
-                                <span class="time">{!! $post->published_at->format('Y年m月d日')!!}</span>
-                            </li>
-                        @empty
-                            <p class="no_data">暂无数据</p>
-                        @endforelse
-                    </ul>
-                    {!! $posts->fragment('list')->links() !!}
+                    {!! $page->postContent->content !!}
+                </div>
             </div>
         </div>
-    </div>
     </div>
     @include('course.layouts.footer')
 @endsection
