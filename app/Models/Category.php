@@ -144,8 +144,11 @@ class Category extends BaseModel implements PresentableInterface
      * @param  Category $category
      * @return bool
      */
-    public function equals(Category $category)
+    public function equals(?Category $category)
     {
+        if (is_null($category)){
+            return null;
+        }
         return $this->id == $category->id;
     }
 
