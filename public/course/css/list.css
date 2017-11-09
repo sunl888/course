@@ -7,7 +7,12 @@
     margin-bottom: 20px;
     padding: 20px;
 }
-
+.no_data {
+    font-size: 20px;
+    color: #aaa;
+    text-align: center;
+    line-height: 50px;
+}
 .list-contain .list-nav {
     width: 25%;
     float: left;
