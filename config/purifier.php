@@ -29,6 +29,14 @@ return [
             'AutoFormat.AutoParagraph' => true,
             'AutoFormat.RemoveEmpty' => true,
         ],
+        // 这个配置主要用来删除首页通知公告栏需要显示部分文章内容，但是文章内容里面包含了样式，需要清除这里的样式才能正常显示
+        'clear_content_style' => [
+            'HTML.Doctype' => 'HTML 4.01 Transitional',
+            'HTML.Allowed' => '',
+            'CSS.AllowedProperties' => '',
+            'AutoFormat.AutoParagraph' => false,
+            'AutoFormat.RemoveEmpty' => true,
+        ],
         'test' => [
             'Attr.EnableID' => 'true',
         ],

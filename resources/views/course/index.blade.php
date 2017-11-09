@@ -9,6 +9,9 @@
     @widget('navigation_bar')
     <div class="top-contain">
         <div class="course">
+            @php
+                $categoryRepository = app(App\Repositories\CategoryRepository::class);
+            @endphp
             <div class="title">
                 <h4>课程简介</h4>
                 <a class="more" href="javascript:;">+More</a>
@@ -21,83 +24,33 @@
         <div class="notice">
             <div class="title">
                 <h4>通知公告</h4>
-                <a class="more" href="javascript:;">+More</a>
+                @php
+                    $news = $categoryRepository->findByCateName('通知公告');
+                @endphp
+                <a class="more" {!! $news->getPresenter()->linkAttribute() !!}>+More</a>
                 <i class="icon_title"></i>
             </div>
             <div class="contain_box currency-list">
                 <ul>
-                    <li class="item open">
+                    @foreach(Facades\App\Widgets\PostList::mergeConfig(['category'=>$news,'limit'=>5])->getData()['posts'] as $post)
+                        @php
+                            if($loop->first){
+                                echo '<li class="item open">';
+                            }else{
+                                echo '<li class="item">';
+                            }
+                        @endphp
                         <div class="info">
-                            <a href="javascript:;"><img src="./images/new.jpg" alt=""></a>
-                            <a class="text_box" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会理论当中常常用一些抽象和甚至复杂理论框架来解释和分析社会样式和宏观社会结构。社会理论总跟经典的学科有一个令人不安的关系，就是大部分的重要社会学家从未担任大学职务。社会理论总跟经典的学科有一个令人不安的关系，就是大部分的重要社会学家从未担任大学职务。</a>
+                            <a href="{!! $post->getPresenter()->url() !!}">
+                                <img src="{{image_url($post->cover)}}" alt="{{$post->title}}"/>
+                            </a>
+                            <a class="text_box" href="{!! $post->getPresenter()->url() !!}">{!! clean($post->postContent->content, 'clear_content_style')!!}</a>
                         </div>
-                        <a class="text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <div class="info">
-                            <a href="javascript:;"><img src="./images/new.jpg" alt=""></a>
-                            <a class="text_box" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会理论当中常常用一些抽象和甚至复杂理论框架来解释和分析社会样式和宏观社会结构。社会理论总跟经典的学科有一个令人不安的关系，就是大部分的重要社会学家从未担任大学职务。</a>
-                        </div>
-                        <a class="text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <div class="info">
-                            <a href="javascript:;"><img src="./images/new.jpg" alt=""></a>
-                            <a class="text_box" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会理论当中常常用一些抽象和甚至复杂理论框架来解释和分析社会样式和宏观社会结构。社会理论总跟经典的学科有一个令人不安的关系，就是大部分的重要社会学家从未担任大学职务。</a>
-                        </div>
-                        <a class="text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <div class="info">
-                            <a href="javascript:;"><img src="./images/new.jpg" alt=""></a>
-                            <a class="text_box" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会理论当中常常用一些抽象和甚至复杂理论框架来解释和分析社会样式和宏观社会结构。社会理论总跟经典的学科有一个令人不安的关系，就是大部分的重要社会学家从未担任大学职务。</a>
-                        </div>
-                        <a class="text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <div class="info">
-                            <a href="javascript:;"><img src="./images/new.jpg" alt=""></a>
-                            <a class="text_box" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会理论当中常常用一些抽象和甚至复杂理论框架来解释和分析社会样式和宏观社会结构。社会理论总跟经典的学科有一个令人不安的关系，就是大部分的重要社会学家从未担任大学职务。</a>
-                        </div>
-                        <a class="text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <div class="info">
-                            <a href="javascript:;"><img src="./images/new.jpg" alt=""></a>
-                            <a class="text_box" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会理论当中常常用一些抽象和甚至复杂理论框架来解释和分析社会样式和宏观社会结构。社会理论总跟经典的学科有一个令人不安的关系，就是大部分的重要社会学家从未担任大学职务。</a>
-                        </div>
-                        <a class="text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <div class="info">
-                            <a href="javascript:;"><img src="./images/new.jpg" alt=""></a>
-                            <a class="text_box" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会理论当中常常用一些抽象和甚至复杂理论框架来解释和分析社会样式和宏观社会结构。社会理论总跟经典的学科有一个令人不安的关系，就是大部分的重要社会学家从未担任大学职务。</a>
-                        </div>
-                        <a class="text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <div class="info">
-                            <a href="javascript:;"><img src="./images/new.jpg" alt=""></a>
-                            <a class="text_box" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会理论当中常常用一些抽象和甚至复杂理论框架来解释和分析社会样式和宏观社会结构。社会理论总跟经典的学科有一个令人不安的关系，就是大部分的重要社会学家从未担任大学职务。</a>
-                        </div>
-                        <a class="text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <div class="info">
-                            <a href="javascript:;"><img src="./images/new.jpg" alt=""></a>
-                            <a class="text_box" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。社会理论当中常常用一些抽象和甚至复杂理论框架来解释和分析社会样式和宏观社会结构。社会理论总跟经典的学科有一个令人不安的关系，就是大部分的重要社会学家从未担任大学职务。</a>
-                        </div>
-                        <a class="text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="time">2017-10-11</span>
-                    </li>
+                        <a class="text_title" href="{!! $post->getPresenter()->url() !!}">{!! $post->title !!}</a>
+                        <span class="time">{!! $post->published_at->format('Y-m-d')!!}</span>
+                        </li>
+                    @endforeach
+
                 </ul>
             </div>
         </div>
@@ -115,26 +68,7 @@
                         <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
                         <span class="download-time">2017-10-11</span>
                     </li>
-                    <li class="item">
-                        <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="download-time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="download-time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="download-time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="download-time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="download-time">2017-10-11</span>
-                    </li>
+
                 </ul>
             </div>
         </div>
@@ -150,26 +84,7 @@
                         <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
                         <span class="download-time">2017-10-11</span>
                     </li>
-                    <li class="item">
-                        <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="download-time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="download-time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="download-time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="download-time">2017-10-11</span>
-                    </li>
-                    <li class="item">
-                        <a class="download-text_title" href="javascript:;">社会学是系统地研究社会行为与人类群体的学科。</a>
-                        <span class="download-time">2017-10-11</span>
-                    </li>
+
                 </ul>
             </div>
         </div>
@@ -187,8 +102,7 @@
                 var _self = $(this);
                 _self.parent().find('.open').removeClass('open');
                 _self.addClass('open');
-            }, function () {
-            });
+            }, function () {});
         });
         /* 图片滚动 */
         $(function () {
