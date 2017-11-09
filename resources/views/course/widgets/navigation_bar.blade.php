@@ -6,8 +6,8 @@
                 <a href="{!! route('frontend.web.index')!!}">首页</a>
             </li>
             @foreach($allNav as $category)
-                <li>
-                    <a title="{!! $category->cate_name !!}" {!! $category->equals($navigation->getActiveTopNav())?' class="active"':'' !!} {!! $category->getPresenter()->linkAttribute() !!}>{!! $category->cate_name !!}</a>
+                <li {!! $category->equals($navigation->getActiveTopNav())?' class="active"':'' !!}>
+                    <a title="{!! $category->cate_name !!}" {!! $category->getPresenter()->linkAttribute() !!}>{!! $category->cate_name !!}</a>
                     @if($category->hasChildren())
                         <div class="sub-nav">
                             @foreach($category->children as $children)
