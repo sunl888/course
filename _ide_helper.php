@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.20 on 2017-11-08.
+ * Generated for Laravel 5.5.20 on 2017-11-10.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -12544,38 +12544,6 @@ namespace Mews\Captcha\Facades {
  
 }
 
-namespace Mews\Purifier\Facades { 
-
-    class Purifier {
-        
-        /**
-         * 
-         *
-         * @param $dirty
-         * @param null $config
-         * @return mixed 
-         * @static 
-         */ 
-        public static function clean($dirty, $config = null)
-        {
-            return \Mews\Purifier\Purifier::clean($dirty, $config);
-        }
-        
-        /**
-         * Get HTMLPurifier instance.
-         *
-         * @return \HTMLPurifier 
-         * @static 
-         */ 
-        public static function getInstance()
-        {
-            return \Mews\Purifier\Purifier::getInstance();
-        }
-         
-    }
- 
-}
-
 namespace Overtrue\LaravelPinyin\Facades { 
 
     class Pinyin {
@@ -14819,8 +14787,6 @@ namespace  {
     class Breadcrumbs extends \DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs {}
 
     class Captcha extends \Mews\Captcha\Facades\Captcha {}
-
-    class Purifier extends \Mews\Purifier\Facades\Purifier {}
 
     class Pinyin extends \Overtrue\LaravelPinyin\Facades\Pinyin {}
  
