@@ -61,7 +61,7 @@
 
 .course-box {
     overflow: hidden;
-    height: 275px;
+    height: 315px;
 }
 
 .contain_box p {
@@ -73,7 +73,7 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 13;
+    -webkit-line-clamp: 15;
 }
 
 /*通知公告*/
@@ -109,7 +109,7 @@
     padding-left: 10px;
     overflow: hidden;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -143,16 +143,10 @@
 /*列表:hover事件*/
 .contain_box ul li.open .info {
     display: block;
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
-.contain_box ul li.open .text_title {
-    display: none;
-}
 
-.contain_box ul li.open .time {
-    display: none;
-}
 
 /*主讲老师资料下载*/
 .teacher, .download {

@@ -40,14 +40,15 @@
                                 echo '<li class="item">';
                             }
                         @endphp
+
+                        <a class="text_title" href="{!! $post->getPresenter()->url() !!}">{!! $post->title !!}</a>
+                        <span class="time">{!! $post->published_at->format('Y-m-d')!!}</span>
                         <div class="info">
                             <a href="{!! $post->getPresenter()->url() !!}">
                                 <img src="{{image_url($post->cover)}}" alt="{{$post->title}}"/>
                             </a>
-                            <a class="text_box" href="{!! $post->getPresenter()->url() !!}">{!! clean($post->postContent->content, 'clear_content_style')!!}</a>
+                            <a class="text_box" href="{!! $post->getPresenter()->url() !!}">{!! $post->excerpt !!}</a>
                         </div>
-                        <a class="text_title" href="{!! $post->getPresenter()->url() !!}">{!! $post->title !!}</a>
-                        <span class="time">{!! $post->published_at->format('Y-m-d')!!}</span>
                         </li>
                     @endforeach
 
