@@ -2532,7 +2532,7 @@ exports.default = {
     handleFormatError: function handleFormatError(file) {
       this.$Notice.warning({
         title: '文件格式不正确',
-        desc: '\u6587\u4EF6' + file.name + '\u683C\u5F0F\u4E0D\u6B63\u786E\uFF0C\u8BF7\u4E0A\u4F20 jpg \u6216 png \u683C\u5F0F\u7684\u56FE\u7247\u3002'
+        desc: '\u6587\u4EF6' + file.name + '\u683C\u5F0F\u4E0D\u6B63\u786E\uFF0C\u8BF7\u4E0A\u4F20 jpg, png, gif \u683C\u5F0F\u7684\u56FE\u7247\u3002'
       });
       this.handleRemove();
     },
@@ -19668,7 +19668,7 @@ exports = module.exports = __webpack_require__("./node_modules/_css-loader@0.28.
 
 
 // module
-exports.push([module.i, "\n.article_item[data-v-230b86ef] {\n  border-radius: 4px;\n  padding: 10px;\n  background-color: #fff;\n  overflow: hidden;\n  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px;\n          box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px;\n  position: relative;\n  margin-bottom: 15px;\n}\n.article_item .cover[data-v-230b86ef] {\n  float: left;\n  border-radius: 5px;\n  width: 170px;\n  height: 110px;\n  background-size: cover;\n}\n.article_item:hover a.pre_view[data-v-230b86ef] {\n  display: block!important;\n}\n.article_item .body[data-v-230b86ef] {\n  padding-left: 190px;\n  padding-right: 200px;\n}\n.article_item .body.no_cover[data-v-230b86ef] {\n  padding-left: 0;\n}\n.article_item .body h3[data-v-230b86ef],\n.article_item .body a[data-v-230b86ef]:not(.pre_view) {\n  display: block;\n  margin-right: 80px;\n  color: #525659;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  font-weight: normal;\n  white-space: nowrap;\n  font-size: 18px;\n  position: relative;\n}\n.article_item .body h3 > .tag[data-v-230b86ef]:last-child,\n.article_item .body a:not(.pre_view) > .tag[data-v-230b86ef]:last-child {\n  margin-right: 10px;\n}\n.article_item .body h3 > .pre_view[data-v-230b86ef],\n.article_item .body a:not(.pre_view) > .pre_view[data-v-230b86ef] {\n  display: none;\n  position: absolute;\n  right: 30px;\n  top: 4px;\n  margin: 0;\n  font-size: 10px;\n}\n.article_item .body .describe[data-v-230b86ef] {\n  margin: 5px 0 3px 0;\n  color: #999;\n  height: 39px;\n  overflow: hidden;\n}\n.article_item .body .info[data-v-230b86ef] {\n  line-height: 30px;\n  margin-right: 15px;\n  float: right;\n}\n.article_item .body .info > .icon[data-v-230b86ef] {\n  font-size: 16px;\n  margin-right: 5px;\n}\n.article_item .option[data-v-230b86ef] {\n  position: absolute;\n  top: 47px;\n  right: 30px;\n}\n.article_item .option button[data-v-230b86ef]:first-child {\n  margin-right: 20px;\n}\n", ""]);
+exports.push([module.i, "\n.article_item[data-v-230b86ef] {\n  border-radius: 4px;\n  padding: 10px;\n  background-color: #fff;\n  overflow: hidden;\n  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px;\n          box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px;\n  position: relative;\n  margin-bottom: 15px;\n}\n.article_item .cover[data-v-230b86ef] {\n  float: left;\n  border-radius: 5px;\n  width: 170px;\n  height: 110px;\n  background-size: cover;\n}\n.article_item:hover a.pre_view[data-v-230b86ef] {\n  display: block!important;\n}\n.article_item .body[data-v-230b86ef] {\n  padding-left: 190px;\n  padding-right: 200px;\n}\n.article_item .body.no_cover[data-v-230b86ef] {\n  padding-left: 0;\n}\n.article_item .body h3[data-v-230b86ef],\n.article_item .body a[data-v-230b86ef]:not(.pre_view) {\n  display: block;\n  margin-right: 80px;\n  color: #525659;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  font-weight: normal;\n  white-space: nowrap;\n  font-size: 18px;\n  position: relative;\n}\n.article_item .body h3 > .tag[data-v-230b86ef]:last-child,\n.article_item .body a:not(.pre_view) > .tag[data-v-230b86ef]:last-child {\n  margin-right: 10px;\n}\n.article_item .body h3 > .pre_view[data-v-230b86ef],\n.article_item .body a:not(.pre_view) > .pre_view[data-v-230b86ef] {\n  display: none;\n  position: absolute;\n  right: 30px;\n  top: 4px;\n  margin: 0;\n  font-size: 10px;\n}\n.article_item .body .describe[data-v-230b86ef] {\n  margin: 5px 0 3px 0;\n  color: #999;\n  height: 38px;\n  overflow: hidden;\n}\n.article_item .body .info[data-v-230b86ef] {\n  line-height: 30px;\n  margin-right: 15px;\n  float: right;\n}\n.article_item .body .info > .icon[data-v-230b86ef] {\n  font-size: 16px;\n  margin-right: 5px;\n}\n.article_item .option[data-v-230b86ef] {\n  position: absolute;\n  top: 47px;\n  right: 30px;\n}\n.article_item .option button[data-v-230b86ef]:first-child {\n  margin-right: 20px;\n}\n", ""]);
 
 // exports
 
@@ -77773,7 +77773,7 @@ var render = function() {
             "show-upload-list": false,
             "on-success": _vm.handleSuccess,
             "on-progress": _vm.handleProgress,
-            format: ["jpg", "jpeg", "png"],
+            format: ["jpg", "jpeg", "png", "gif"],
             "max-size": 2048,
             "on-format-error": _vm.handleFormatError,
             "on-exceeded-size": _vm.handleMaxSize,

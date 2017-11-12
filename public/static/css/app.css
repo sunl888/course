@@ -7044,6 +7044,9 @@ footer.footer {
 .zm-news {
   background-color: #fff;
 }
+.zm-news .news-item {
+  margin-bottom: 10px;
+}
 .zm-news .news-item .news-main:hover a {
   color: #41B883!important;
 }
